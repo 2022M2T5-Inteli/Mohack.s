@@ -1,0 +1,15 @@
+/* Caixa central cinza claro */
+.bigbox {
+    background-color: #22684189;
+    border-radius: 20px;
+}
+
+/* Caixa central cinza escuro */
+.smallbox {
+    background-color: #216740;
+    border-radius: 10px;
+}
+
+.nomes-do-cadastro{
+    color: white;
+}

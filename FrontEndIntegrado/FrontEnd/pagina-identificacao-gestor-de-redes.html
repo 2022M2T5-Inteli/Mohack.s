@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/identificacao-do-usuario.css" rel="stylesheet">
+    <title> Nome do site </title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center vh-100 align-items-center">
+        <div class="bigbox p-3">
+            <div class="smallbox">
+                <div class="row pb-4 ps-4 pe-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6 my-3 my-md-4 nomes-do-cadastro">
+                                <h4> Nome </h4>
+                                <input type="text" size="30">
+                            </div>
+                            <div class="col-12 col-md-6 my-3 my-md-4 d-flex align-items-end">
+                                <div id="label">
+                                    <label for="uf" class="nomes-do-cadastro"> 
+                                        <h4> Selecione a UF </h4>
+                                    </label>
+                                    <select name="uf" id="uf">
+                                        <option value="-"> - </option>
+                                        <option value="ac"> AC </option>
+                                        <option value="al"> AL </option>
+                                        <option value="ap"> AP </option>
+                                        <option value="am"> AM </option>
+                                        <option value="ba"> BA </option>
+                                        <option value="ce"> CE </option>
+                                        <option value="df"> DF </option>
+                                        <option value="es"> ES </option>
+                                        <option value="go"> GO </option>
+                                        <option value="ma"> MA </option>
+                                        <option value="mt"> MT </option>
+                                        <option value="ms"> MS </option>
+                                        <option value="mg"> MG </option>
+                                        <option value="pa"> PA </option>
+                                        <option value="pb"> PB </option>
+                                        <option value="pr"> PR </option>
+                                        <option value="pe"> PE </option>
+                                        <option value="pi"> PI </option>
+                                        <option value="rj"> RJ </option>
+                                        <option value="rn"> RN </option>
+                                        <option value="rs"> RS </option>
+                                        <option value="ro"> RO </option>
+                                        <option value="rr"> RR </option>
+                                        <option value="sc"> SC </option>
+                                        <option value="sp"> SP </option>
+                                        <option value="se"> SE </option>
+                                        <option value="to"> TO </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 my-3 my-md-4 nomes-do-cadastro">
+                                <h4> Digite a Cidade </h4>
+                                <input type="text" size="30">
+                            </div>
+                            <div class="col-12 col-md-6 my-3 my-md-4 nomes-do-cadastro">
+                                <h4> Digite a Rede de Escolas </h4>
+                                <input type="text" size="30">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex; justify-content:center; margin-top: 40px;" >
+                        <button type="button" style="height: 40px; width:80px; border-radius: 10px;"> 
+                            Entrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="java-script/muda-de-paginas.js"></script>
+</body>
+</html>
