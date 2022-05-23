@@ -22,7 +22,9 @@ height: 400px;
 padding: 0%;
 border-radius: 1rem 1rem 1rem 1rem;
 font-family: Verdana;
-background-color: #BC9316;
+background-color: #d2ae41;
+color:aliceblue;
+border-color: aliceblue;
 }
 
 .button-inicial:hover{
@@ -30,4 +32,7 @@ background-color: #BC9316;
     transition: 0.5s;
 }
 
-
+body{
+    background-image: url("./imagens/fundo4.png");
+    object-fit: cover;
+}

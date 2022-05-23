@@ -6,7 +6,8 @@
 
 /* CSS relacionado aos cards */
 .options {
-    background-color:#C4C4C4;
+    background-color: rgb(255, 255, 255);
+    color: #bc9216;
     display: inline-block;
     width: 150px;
     border-radius: 10px;
@@ -20,7 +21,8 @@
 
 /* CSS que deixa os botões em tom mais claro quando passa o mouse por cima */
 .options:hover{
-    background-color: #2eb992;
+    background-color: #bc9216c5;
+    color:aliceblue;
     transform: scale(1.08);
     transition: 0.5s;
 }
@@ -32,4 +34,8 @@
     margin-block-start: 0em;
     margin-block-end: 0em;
     color: white;
+}
+body{
+    background-image: url("./imagens/fundo4.png");
+    object-fit: cover;
 }

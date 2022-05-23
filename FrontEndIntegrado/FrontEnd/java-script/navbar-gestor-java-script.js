@@ -21,4 +21,3 @@ function abrePaginaEixos3(){
 function abreQuestionarioTres(){
     document.location.href="pagina-comecar-questionario-gestao-pessoas.html"
 }
-s
