@@ -6,13 +6,14 @@ p {
     margin-left: 3cm;
     margin-right: 3cm;
     margin-top: 0cm;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
 }
 .botoes{
     float: left;
     top: 250px;
     left: -15px;
     border-radius: 1rem 1rem 1rem 1rem;
+    
 }
 .botoes2{
     align-items: right;
@@ -69,4 +70,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+body{
+    background-image: url("./imagens/fundo4.png");
+    object-fit: cover;
 }
