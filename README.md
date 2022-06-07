@@ -8,7 +8,7 @@
 
 ## Mohacks
 
-## Integrantes: <a href="https://www.linkedin.com/in/carolina-favaro-fricks-1a0423231/">Carolina Favaro Fricks</a>, <a href="https://www.linkedin.com/in/victorbarq/">Gabriel Lerner</a>, <a href="https://www.linkedin.com/in/victorbarq/">Gustavo Ferreira</a>, <a href="https://www.linkedin.com/in/sbluizfernando/">Luiz Borger</a>, <a href="https://www.linkedin.com/in/raduanmuarrek/">Raduan Muarrek</a>, <a href="https://www.linkedin.com/in/yasminvit%C3%B3riarocha/">Yasmin Vitoria</a>
+## Integrantes: <a href="https://www.linkedin.com/in/carolina-favaro-fricks-1a0423231/">Carolina Favaro Fricks</a>, <a href="https://www.linkedin.com/in/victorbarq/">Gabriel Lerner</a>, <a href="https://www.linkedin.com/in/victorbarq/">Gustavo Ferreira</a>, <a href="https://www.linkedin.com/in/sbluizfernando/">Luiz Borger</a>, <a href="https://www.linkedin.com/in/raduanmuarrek/">Raduan Muarrek</a>, <a href="https://www.linkedin.com/in/raphael-lisboa-antunes-a41919231/">Raphael Lisboa</a>, <a href="https://www.linkedin.com/in/yasminvit%C3%B3riarocha/">Yasmin Vitoria</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/monica-anastassiu-d-sc-2568522/">Monica Anastassiu</a>, <a href="https://www.linkedin.com/in/andreluizbraga/">Andre Braga</a>, <a href="https://www.linkedin.com/in/sergio-venancio-a509b342/">Sergio Venancio</a>, <a href="https://www.linkedin.com/in/pedroteberga/">Pedro Teberga</a>, <a href="https://www.linkedin.com/in/ricardo-jos%C3%A9-missori/">Ricardo Missori</a>
 
