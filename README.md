@@ -4,19 +4,20 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# EduTrack
 
-## Nome do Grupo
+## Mohacks
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/carolina-favaro-fricks-1a0423231/">Carolina Favaro Fricks</a>, <a href="https://www.linkedin.com/in/victorbarq/">Gabriel Lerner</a>, <a href="https://www.linkedin.com/in/victorbarq/">Gustavo Ferreira</a>, <a href="https://www.linkedin.com/in/sbluizfernando/">Luiz Borger</a>, <a href="https://www.linkedin.com/in/raduanmuarrek/">Raduan Muarrek</a>, <a href="https://www.linkedin.com/in/yasminvit%C3%B3riarocha/">Yasmin Vitoria</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/monica-anastassiu-d-sc-2568522/">Monica Anastassiu</a>, <a href="https://www.linkedin.com/in/andreluizbraga/">Andre Braga</a>, <a href="https://www.linkedin.com/in/sergio-venancio-a509b342/">Sergio Venancio</a>, <a href="https://www.linkedin.com/in/pedroteberga/">Pedro Teberga</a>, <a href="https://www.linkedin.com/in/ricardo-jos%C3%A9-missori/">Ricardo Missori</a>
 
 ## Descrição
 
 📜 Descrição curta sobre o que seu projeto faz.
+
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+O projeto é uma aplicação Web para identificar possiveis melhorias em instituições de ensino.
 <br><br>
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
