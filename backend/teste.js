@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const hostname = '127.0.0.1';
-const port = 3081;
+const port = 3082;
 const sqlite3 = require('sqlite3').verbose();
 const DBPATH = 'banco.db';
 const bodyParser = require('body-parser');
@@ -37,7 +37,7 @@ app.post('/Adiministradorinsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "INSERT INTO Adiministrador (idAdiministrador, Nome, Email) VALUES ('" + req.body.idAgenda + "','" + req.body.Nome + "','" + req.body.Email + "')";
+	sql = "INSERT INTO Adiministrador (Nome, Email) VALUES ('" + req.body.Nome + "','" + req.body.Email + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -290,7 +290,7 @@ app.post('/Escolainsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "INSERT INTO Dominio (Instituicao, Estado, Cidade, Bairro, Rua, numeroAlunos, numeroFuncionarios, codigoCenso) VALUES ('" + req.body.Instituicao + "','" + req.body.Estado + "','" + req.body.Cidade + "','" + req.body.Bairro + "','" + req.body.Rua + "','" + req.body.numeroAlunos + "','" + req.body.numeroFuncionarios + "','" + req.body.codigoCenso + "')";
+	sql = "INSERT INTO Escola (Instituicao, Estado, Cidade, Bairro, Rua, numeroAlunos, numeroFuncionarios, codigoCenso) VALUES ('" + req.body.Instituicao + "','" + req.body.Estado + "','" + req.body.Cidade + "','" + req.body.Bairro + "','" + req.body.Rua + "','" + req.body.numeroAlunos + "','" + req.body.numeroFuncionarios + "','" + req.body.codigoCenso + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -459,6 +459,8 @@ app.post('/fatoresCriticosdelete', urlencodedParser, (req, res) => {
 	});
 	db.close(); // Fecha o banco
 });
+
+
 
 /* Inicia o servidor */
 app.listen(port, hostname, () => {
