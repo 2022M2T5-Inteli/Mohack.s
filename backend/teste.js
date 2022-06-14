@@ -14,6 +14,9 @@ app.use(express.json());
 
 /* Definição dos endpoints */
 
+
+/* Definição dos endpoints */
+
 /****** CRUD ******************************************************************/
 
 //tabela administrador
@@ -78,6 +81,10 @@ app.post('/Adiministradordelete', urlencodedParser, (req, res) => {
 	});
 	db.close(); // Fecha o banco
 });
+
+/****** CRUD ******************************************************************/
+
+
 
 
 // Retorna todos registros (é o R do CRUD - Read)
