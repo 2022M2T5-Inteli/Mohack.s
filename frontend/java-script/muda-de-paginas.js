@@ -1,10 +1,10 @@
 //Funções que levam o usuario para diferentes paginas de identificacao dependendo do botão selecionado
 function abrePaginaLoginGestorEscola(){
-    document.location.href="pagina-identificacao-gestor-de-escolas.html";
+    document.location.href="paginacadastroescolas2.html";
 }
 
 function abrePaginaLoginAgenteFalconi(){
-    document.location.href="pagina-identificacao-agente-falconi.html";
+    document.location.href="paginacadastrofalconi.html";
 }
 
 function abrePaginaLoginGestorRedes(){

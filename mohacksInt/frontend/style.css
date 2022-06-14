@@ -1,0 +1,54 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  table {
+    border: 2px solid wjite;
+    border-collapse: collapse;
+  }
+
+  tr {
+    border: 2px solid white;
+    border-collapse: collapse;
+
+  }
+
+  td {
+    border: 2px solid white;
+    border-collapse: collapse;
+    background-color: #bc9316;
+
+  }
+
+  #campo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+
+  }
+
+  #nome {
+    border-radius: 10px;
+  }
+
+  #enviarbtn{
+    border-radius: 5px;
+    background-color: #bc9316;
+    color: black;
+  }
+
+  #editarbtn{
+    border-radius: 5px;
+    background-color: #bc9316;
+    color: black;
+  }
+
+  #idInput{
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+  }
