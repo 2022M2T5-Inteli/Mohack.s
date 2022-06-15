@@ -21,12 +21,12 @@ app.use(express.json());
 
 //tabela adiministrador
 // Retorna todos registros (é o R do CRUD - Read)
-app.get('/Adiministrador', (req, res) => {
+app.get('/Administrador', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  	var sql = 'SELECT * FROM Adiministrador ORDER BY Nome COLLATE NOCASE';
+  	var sql = 'SELECT * FROM Administrador ORDER BY Nome COLLATE NOCASE';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
 		    throw err;
@@ -36,11 +36,11 @@ app.get('/Adiministrador', (req, res) => {
 	db.close(); // Fecha o banco
 });
 // Insere um registro (é o C do CRUD - Create)
-app.post('/Adiministradprinsert', urlencodedParser, (req, res) => {
+app.post('/Administradorinsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "INSERT INTO Adiministrador (Nome, Email) VALUES ('" + req.body.Nome + "','" + req.body.Email + "')";
+	sql = "INSERT INTO Administrador (Nome, Email) VALUES ('" + req.body.Nome + "','" + req.body.Email + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -51,11 +51,11 @@ app.post('/Adiministradprinsert', urlencodedParser, (req, res) => {
 	res.end();
 });
 // Atualiza um registro (é o U do CRUD - Update)
-app.post('/AdiministradorUpdate', urlencodedParser, (req, res) => {
+app.post('/AdministradorUpdate', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "UPDATE Adiministrador SET Nome = '" + req.body.Nome + "', Email = '" + req.body.Email + "' WHERE idFalconi = '" + req.body.idFalconi + "'";
+	sql = "UPDATE Administrador SET Nome = '" + req.body.Nome + "', Email = '" + req.body.Email + "' WHERE idFalconi = '" + req.body.idFalconi + "'";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -66,11 +66,11 @@ app.post('/AdiministradorUpdate', urlencodedParser, (req, res) => {
 	db.close(); // Fecha o banco
 });
 // Exclui um registro do (é o D do CRUD - Delete)
-app.post('/Adiministradordelete', urlencodedParser, (req, res) => {
+app.post('/Administradordelete', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "DELETE FROM Adiministrador WHERE idFalconi = '" + req.body.idFalconi + "'";
+	sql = "DELETE FROM Administrador WHERE idFalconi = '" + req.body.idFalconi + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
@@ -139,7 +139,7 @@ app.post('/agendainsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "INSERT INTO Agenda (idAgenda, Nome) VALUES ('" + req.body.idAgenda + "','" + req.body.Nome + "')";
+	sql = "INSERT INTO Agenda (Nome) VALUES ('" + req.body.Nome + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -201,7 +201,7 @@ app.post('/Alternativainsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "INSERT INTO Alternativa (textAlternativa, Cargo, idPerg) VALUES ('" + req.body.textAlternativa + "','" + req.body.Cargo + "','" + req.body.idPerg + "')";
+	sql = "INSERT INTO Alternativa (textAlternativa, Nota, idPerg) VALUES ('" + req.body.textAlternativa + "','" + req.body.Nota + "','" + req.body.idPerg + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
