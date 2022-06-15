@@ -181,6 +181,69 @@ app.post('/agendadelete', urlencodedParser, (req, res) => {
 });
 
 
+//tabela Alternativa
+app.get('/Alternativa', (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+  	var sql = 'SELECT * FROM Alternativa ORDER BY textAlternativa COLLATE NOCASE';
+	db.all(sql, [],  (err, rows ) => {
+		if (err) {
+		    throw err;
+		}
+		res.json(rows);
+	});
+	db.close(); // Fecha o banco
+});
+// Insere um registro (é o C do CRUD - Create)
+app.post('/Alternativainsert', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "INSERT INTO Alternativa (textAlternativa, Cargo, idPerg) VALUES ('" + req.body.textAlternativa + "','" + req.body.Cargo + "','" + req.body.idPerg + "')";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+	});
+	db.close(); // Fecha o banco
+	res.end();
+});
+// Atualiza um registro (é o U do CRUD - Update)
+app.post('/AlternativaUpdate', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "UPDATE Alternativa SET textAlternativa = '" + req.body.textAlternativa + "', idPerg = '" + req.body.idPerg + "', Nota = '" + req.body.Nota + "' WHERE Alternativa = '" + req.body.Alternativa + "'";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close(); // Fecha o banco
+});
+// Exclui um registro do (é o D do CRUD - Delete)
+app.post('/Alternativadelete', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "DELETE FROM Alternativa WHERE Alternativa = '" + req.body.Alternativa + "'";
+	console.log(sql);
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close(); // Fecha o banco
+});
+
+
 //tabela eixo
 // Retorna todos registros (é o R do CRUD - Read)
 app.get('/Eixo', (req, res) => {
@@ -372,17 +435,13 @@ app.post('/Escoladelete', urlencodedParser, (req, res) => {
 });
 
 
-
-
-
-//tabela Perguntas
-// Retorna todos registros (é o R do CRUD - Read)
-app.get('/Perguntas', (req, res) => {
+//tabela Gestor
+app.get('/Gestor', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  	var sql = 'SELECT * FROM Perguntas ORDER BY TextPerg COLLATE NOCASE';
+  	var sql = 'SELECT * FROM Gestor ORDER BY Nome COLLATE NOCASE';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
 		    throw err;
@@ -392,11 +451,11 @@ app.get('/Perguntas', (req, res) => {
 	db.close(); // Fecha o banco
 });
 // Insere um registro (é o C do CRUD - Create)
-app.post('/Perguntasinsert', urlencodedParser, (req, res) => {
+app.post('/Gestorinsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "INSERT INTO fatoresCriticos (textPerg, Peso, idSub) VALUES ('" + req.body.textPerg + "','" + req.body.Peso + "','" + req.body.idSub + "')";
+	sql = "INSERT INTO Gestor (Nome, Cargo, idEscola) VALUES ('" + req.body.Nome + "','" + req.body.Cargo + "','" + req.body.idEscola + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -407,11 +466,11 @@ app.post('/Perguntasinsert', urlencodedParser, (req, res) => {
 	res.end();
 });
 // Atualiza um registro (é o U do CRUD - Update)
-app.post('/PerguntasUpdate', urlencodedParser, (req, res) => {
+app.post('/GestorUpdate', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "UPDATE Perguntas SET textPerg = '" + req.body.textPerg + "', Peso = '" + req.body.Peso + "', idSub = '" + req.body.idSub + "' WHERE idPerg = '" + req.body.idPerg + "'";
+	sql = "UPDATE Gestor SET Nome = '" + req.body.Nome + "', idEscola = '" + req.body.idEscola + "', Cargo = '" + req.body.Cargo + "' WHERE idGestor = '" + req.body.idGestor + "'";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -422,11 +481,76 @@ app.post('/PerguntasUpdate', urlencodedParser, (req, res) => {
 	db.close(); // Fecha o banco
 });
 // Exclui um registro do (é o D do CRUD - Delete)
-app.post('/Perguntasdelete', urlencodedParser, (req, res) => {
+app.post('/Gestordelete', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "DELETE FROM Perguntas WHERE idPerg = '" + req.body.idPerg + "'";
+	sql = "DELETE FROM Gestor WHERE idGestor = '" + req.body.idGestor + "'";
+	console.log(sql);
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close(); // Fecha o banco
+});
+
+
+
+//tabela Perguntas
+// Retorna todos registros (é o R do CRUD - Read)
+app.get('/Pergunta', (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+  	var sql = 'SELECT * FROM Pergunta ORDER BY TextPerg COLLATE NOCASE';
+	db.all(sql, [],  (err, rows ) => {
+		if (err) {
+		    throw err;
+		}
+		res.json(rows);
+	});
+	db.close(); // Fecha o banco
+});
+// Insere um registro (é o C do CRUD - Create)
+app.post('/Perguntainsert', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "INSERT INTO Pergunta (textPerg, Peso, idSub) VALUES ('" + req.body.textPerg + "','" + req.body.Peso + "','" + req.body.idSub + "')";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+	});
+	db.close(); // Fecha o banco
+	res.end();
+});
+// Atualiza um registro (é o U do CRUD - Update)
+app.post('/PerguntaUpdate', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "UPDATE Pergunta SET textPerg = '" + req.body.textPerg + "', Peso = '" + req.body.Peso + "', idSub = '" + req.body.idSub + "' WHERE idPerg = '" + req.body.idPerg + "'";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close(); // Fecha o banco
+});
+// Exclui um registro do (é o D do CRUD - Delete)
+app.post('/Perguntadelete', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+	sql = "DELETE FROM Pergunta WHERE idPerg = '" + req.body.idPerg + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
