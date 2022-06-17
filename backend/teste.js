@@ -14,6 +14,9 @@ app.use(express.json());
 
 /* Definição dos endpoints */
 
+
+/* Definição dos endpoints */
+
 /****** CRUD ******************************************************************/
 
 //tabela administrador
@@ -47,6 +50,10 @@ app.post('/Respostasinsert', urlencodedParser, (req, res) => {
 	db.close(); // Fecha o banco
 	res.end();
 });
+
+/****** CRUD ******************************************************************/
+
+
 
 
 // Retorna todos registros (é o R do CRUD - Read)
