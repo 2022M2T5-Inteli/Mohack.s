@@ -42,6 +42,7 @@ app.post('/Administradorinsert', urlencodedParser, (req, res) => {
 
 	sql = "INSERT INTO Administrador (Nome, Email) VALUES ('" + req.body.Nome + "','" + req.body.Email + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	console.log(sql)
 	db.run(sql, [],  err => {
 		if (err) {
 		    throw err;
@@ -104,7 +105,7 @@ app.post('/Respostasinsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "INSERT INTO Resposta (idResp, idGestor, idPerg, Alternativa, idEixo) VALUES ('" + req.body.idResp + "','" + req.body.idGestor + "''" + req.body.idPerg + "''" + req.body.Alternativa + "''" + req.body.idEixo + "')";
+	sql = "INSERT INTO Resposta ( idGestor, idPerg, Alternativa, notaTotal, idSub) VALUES ('" + req.body.idGestor + "','" + req.body.idPerg + "','" + req.body.Alternativa + "', '" + req.body.notaTotal + "', '" + req.body.idSub + "')";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -584,7 +585,7 @@ app.post('/criaRede', urlencodedParser, (req, res) => {
     res.statusCode = 200;
     res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-    sql = "INSERT INTO Rede (Nome, Tipo) VALUES ('" + req.body.Nome + "','" + req.body.Tipo + "', 33, false)";
+    sql = "INSERT INTO Rede (Nome, Tipo) VALUES ('" + req.body.Nome + "','" + req.body.Tipo + "')";
     var db = new sqlite3.Database(DBPATH); // Abre o banco
     db.run(sql, [],  err => {
         if (err) {
