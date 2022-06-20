@@ -1,4 +1,5 @@
 //Funções que levam o usuario para diferentes paginas de identificacao dependendo do botão selecionado
+
 function abrePaginaLoginGestorEscola(){
     document.location.href="paginacadastroescolas2.html";
 }
@@ -22,3 +23,12 @@ function abrePaginaCadastroPerguntas(){
 function abrePaginaQuestionarioPerguntas(){
     document.location.href="questionario-perguntas.html";
 }
+
+function login(){
+    document.location.href="../paginalogin.html";
+}
+
+function cadastro(){
+    document.location.href="./index.html";
+}
+
