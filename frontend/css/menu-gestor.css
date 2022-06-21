@@ -14,3 +14,10 @@
     margin: 0px;
     padding: 5px;
 }
+
+#container {
+    width: 100px;
+    height: 200px;
+    margin: 10;
+    padding: 0;
+  }

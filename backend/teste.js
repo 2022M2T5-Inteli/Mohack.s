@@ -188,7 +188,7 @@ app.get('/Alternativa', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  	var sql = 'SELECT * FROM Alternativa ORDER BY textAlternativa COLLATE NOCASE';
+  	var sql = 'SELECT textAlternativa, textPerg, Peso*Nota FROM Alternativa INNER JOIN Pergunta ON Pergunta.idPerg = Alternativa.idPerg ';
 	db.all(sql, [],  (err, rows ) => {
 		if (err) {
 		    throw err;
