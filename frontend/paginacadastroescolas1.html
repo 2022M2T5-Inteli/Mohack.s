@@ -4,107 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>escola</title>
-    <style>
-        body {
-            background-color: #ffffff;
-        }
-        section {
-            background-color: #F4F4F4;
-            border-radius: 20px;
-           
-            width: 670px; /*largura*/
-            height: 510px;
-            /* margin: auto; */
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            margin-top: 20px;
-            color: black;
-            font-size: 13px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        .input {
-            background-color: white;
-            /* box-shadow: 2px 2px 4px black; */
-            padding-top: 2px;
-            font-size: 25px;
-            width: 520px;
-            height: 42px;
-            left: 332px;
-            top: 531px;
-            border: 0px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-           
-           
-        }
-        #titulo {
-            text-align: center;
-            color: #67D5E1;
-            font-size: 30px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            margin-top: -35px;
-        }
-        #button {
-            font-size: 20px;
-            background-color: #67D5E1;
-            color: #ffffff;
-            margin-top: 6px;
-            margin-bottom: 10px;
-            border: 1px #67D5E1;
-            border-radius: 5px;
-            width: 100px;
-            height: 40px;
-        }
-
-        #button:hover {
-	color: #67D5E1;
-    background-color: #ffffff;
-    border: 1px #67D5E1;
-	outline: none;
-}
-
-.edutrack {
-            margin-left: 88vw;
-            width: 140px;
-            height: 62px;
-        }
-
-
-
-    </style>
+    <title>Cadastro escola</title>
+    <link rel="stylesheet" href="css/paginacadastroescolas1.css">
 </head>
 <body>
-    <img class="edutrack" src="https://i.imgur.com/DzwSxei.png"></img>
-    <center>
-        
+    <img class="edutrack" src="https://i.imgur.com/DzwSxei.png"></img> <!-- Imagem da logo do nosso site-->
+    <center> <!--Centraliza a section e o título da página no meio-->
+        <!--"br" significa espaço-->
             <br>
-            <p id="titulo">Para se cadastrar, preencha os dados abaixo:</p>
+            <p id="tituloPágina">Para se cadastrar, preencha os dados abaixo:</p> <!--Título da página-->
                 <section>
                     <br>
                     <br>
                     <br>
                     <br>
-                    <input type="number" name="" id="nAlunos" placeholder="N de alunos" class="input">
+                    <input type="number" name="" id="textoCadastroEscola1" placeholder="N de alunos" class="input"> <!--input text para colocar o número de alunos da escola-->
                     <br>
                     <br>
-                    <input type="number" name="" id="nFuncionarios" placeholder="N de funcionários" class="input">
+                    <input type="number" name="" id="textoCadastroEscola1" placeholder="N de funcionários" class="input"> <!--input text para colocar o número de funcionários da escola-->
                     <br>
                     <br>
-                    <input type="text" name="" id="codCenso" placeholder="Código da escola no censo escolar" class="input">
+                    <input type="text" name="" id="textoCadastroEscola1" placeholder="Código da escola no censo escolar" class="input"> <!--input text para colocar o código da escola no censo escolar-->
                     <br>
                     <br>
-                    <input type="text" name="" id="nomeGestor" placeholder="Nome do gestor" class="input">
+                    <input type="text" name="" id="textoCadastroEscola1" placeholder="Nome do gestor" class="input"> <!--input text para colocar o nome do gestor da escola-->
                     <br>
                     <br>
-                    <input type="text" name="" id="cargo" placeholder="Cargo" class="input">
+                    <input type="text" name="" id="textoCadastroEscola1" placeholder="Cargo" class="input"> <!--input text para colocar o cargo-->
                     <br>
                     <br>
                     <br>
                     <div>
-                        <input type="button" value="Cadastrar" id="button" onclick="cadastrarEscola1()">
+                        <input type="button" value="Cadastrar" id="botão" onclick="cadastrarEscola1()"> <!--Botão para cadastro dos dados-->
                     </div>
                 </section>
             
