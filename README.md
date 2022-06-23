@@ -13,17 +13,17 @@
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/monica-anastassiu-d-sc-2568522/">Monica Anastassiu</a>, <a href="https://www.linkedin.com/in/andreluizbraga/">Andre Braga</a>, <a href="https://www.linkedin.com/in/sergio-venancio-a509b342/">Sergio Venancio</a>, <a href="https://www.linkedin.com/in/pedroteberga/">Pedro Teberga</a>, <a href="https://www.linkedin.com/in/ricardo-jos%C3%A9-missori/">Ricardo Missori</a>
 
 ## Descrição
-📜 Descrição curta sobre o que seu projeto faz.
-<br><br>
-O projeto é uma aplicação Web para identificar possiveis melhorias em instituições de ensino.
-<br><br>
+📜 O EduTrack é uma aplicação web desenvolvida pelos alunos do primeiro semestre da INTELI - Instituto de Tecnologia e Liderança que tem como objetivo mapear o nível de qualidade educacional no Brasil de maneira escalável e automática.
+
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+💡 O EduTrack é um aplicativo que permite que gestores de escolas possam responder um questionário gerando um diagnóstico para ver onde ele pode melhorar e aplicar melhores práticas para sua escola. O questionário é separado em dois eixos, o educacional e o de gestão e nele o gestor irá responder perguntas quantitativas sobre suas atuais práticas.
+
+Paralelo a isso, geramos também um mapa e um dashboard para que seja mapeado o nível de qualidade no ensino público e privado brasileiro, e assim diversas iniciativas, também privadas ou públicas, possam agir para melhorar a educação brasileira.
 <br><br>
 Meu projeto ajuda estudantes inteli a configurarem seus githubs.
 <br><br>
