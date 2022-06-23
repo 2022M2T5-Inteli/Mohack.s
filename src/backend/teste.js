@@ -89,19 +89,14 @@ app.post('/Administradordelete', urlencodedParser, (req, res) => {
 
 //tabela respostas
 // Retorna todos registros (é o R do CRUD - Read)
-app.get('/Respostas/:idSub', (req, res) => {
+app.get('/Respostas/:idGestor/:idSub', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
-	
-	const {idSub} = req.params;
 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-  	var sql = `SELECT idPerg,
-				SUM(Peso) * (SELECT SUM(Alternativa.Nota) FROM Alternativa WHERE Alternativa.idPerg = Pergunta.idPerg) as notaTotal
-				FROM Pergunta
-				WHERE idSub = ?;`;
+  	var sql = `SELECT notaTotal FROM Resposta WHERE idGestor = ? AND idSub = ?`;
 
-	db.all(sql, idSub,  (err, rows ) => {
+	db.all(sql, [req.params.idGestor, req.params.idSub],  (err, rows ) => {
 		if (err) {
 		    throw err;
 		} 	

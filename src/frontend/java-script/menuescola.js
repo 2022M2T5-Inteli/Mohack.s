@@ -2,21 +2,25 @@ const DBPATH = 'banco.db';
 var dataNotes = [];
 const CHART = document.getElementById("myChart");
 
+//Pega idGestor
+sessionStorage.setItem("gestorId", 2);
+
 $.ajaxSetup({async:false});
 $(document).ready(function (){
-    $.get("http://127.0.0.1:3082/Respostas/1", function(resultado) {
+    $.get("http://127.0.0.1:3082/Respostas/"+ sessionStorage.getItem("gestorId") +"/1", function(resultado) {
+        dataNotes.push(resultado[0].notaTotal);
+        // sessionStorage.setItem("gestorId", resultado[0].idGestor);
+    })
+
+    $.get("http://127.0.0.1:3082/Respostas/"+ sessionStorage.getItem("gestorId") +"/2", function(resultado) {
         dataNotes.push(resultado[0].notaTotal);
     })
 
-    $.get("http://127.0.0.1:3082/Respostas/2", function(resultado) {
+    $.get("http://127.0.0.1:3082/Respostas/"+ sessionStorage.getItem("gestorId") +"/3", function(resultado) {
         dataNotes.push(resultado[0].notaTotal);
     })
 
-    $.get("http://127.0.0.1:3082/Respostas/3", function(resultado) {
-        dataNotes.push(resultado[0].notaTotal);
-    })
-
-    $.get("http://127.0.0.1:3082/Respostas/4", function(resultado) {
+    $.get("http://127.0.0.1:3082/Respostas/"+ sessionStorage.getItem("gestorId") +"/4", function(resultado) {
         dataNotes.push(resultado[0].notaTotal);
     })
 
