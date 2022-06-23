@@ -33,6 +33,7 @@ border-color: aliceblue;
 }
 
 body{
-    background-image: url("./imagens/fundo4.png");
+    background-image: url("../css/imagens/fundo.png");
     object-fit: cover;
 }
+

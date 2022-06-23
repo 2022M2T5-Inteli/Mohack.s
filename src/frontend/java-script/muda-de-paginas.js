@@ -33,3 +33,11 @@ function cadastro(){
 function menuGestor(){
     document.location.href="../pagina-menu-gestor/pagina-menu-gestor.html";
 }
+
+
+function abrePaginaQuestionario(){
+    document.location.href="../pagina-tres-grandes-eixos/pagina-tres-grandes-eixos.html";
+}
+function abrePaginaDashboard(){
+    document.location.href="../pagina-menu-escolas/index.html";
+}

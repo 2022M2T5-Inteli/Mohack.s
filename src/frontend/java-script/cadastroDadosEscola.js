@@ -21,4 +21,6 @@ function cadastrarEscola1Bnt(){
             codigoCenso: $('#codCenso').val(),
         },
     });
-}
+    document.location.href="../pagina-menu-escolha-escolas/menu-escolha-escolas.html";
+    }
+    
