@@ -18,6 +18,7 @@ app.use(express.json());
 /* Definição dos endpoints */
 
 
+/* Definição dos endpoints */
 
 /** CRUD **********************/
 
@@ -120,6 +121,10 @@ app.post('/Respostasinsert', urlencodedParser, (req, res) => {
 	db.close(); // Fecha o banco
 	res.end();
 });
+
+/****** CRUD ******************************************************************/
+
+
 
 
 
