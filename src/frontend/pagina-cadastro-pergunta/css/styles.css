@@ -1,0 +1,82 @@
+body{
+  /background-color:deepskyblue;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  /background-color:dimgrey;
+}
+
+nav li {
+  float: left;
+  list-style: none;
+  margin-left: 20px;
+  /background-color:darkgreen;
+}
+
+.bloco-enunciado{
+  /background-color:rgb(75, 30, 210);
+}
+
+.numero-questao{
+ font-size: 40px;
+ display:inline-block;
+ margin-top: 10px;
+ /background-color:cyan;
+}
+
+.caixa-pergunta{
+  width: 60%;
+  height: 2rem;
+  display:inline-block;
+  align-self: center;
+  /background-color:cyan;
+}
+
+.titulo-peso{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+  /background-color:cyan;
+}
+
+.campo-numero{
+  width: 260%;
+  /background-color:cyan;
+}
+
+.menu-peso{
+  width: 10%;
+  display:inline-block;
+  /background-color:blueviolet
+}
+
+.bloco-alternativas{
+  /background-color: rgb(255, 174, 0);
+}
+
+.letra-alternativa{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  display:inline-block;
+  /background-color:rgb(200, 255, 0);
+}
+
+.caixa-alternativa{
+  width: 60%;
+  height: 1.3rem;
+  display:inline-block;
+  /background-color:rgb(255, 175, 175);
+}
+
+button{
+  height: 30px;
+  width: 170px;
+}
+
+.botoes{
+  /background-color: blueviolet;
+  margin-top: 10px;
+}
