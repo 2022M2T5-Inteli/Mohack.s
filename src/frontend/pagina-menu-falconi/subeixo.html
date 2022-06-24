@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <!--<script src="main.js"></script>-->
+</head>
+<body onload="lerSub()"><!--quando o corpo carregar faz a chamada get para leitura-->
+
+    <!--sidebar onde permite a navegação do cadastramento de formulário (etapa por etapa)-->
+      <input type="checkbox" id="check">  <!--checkbox que funcionará como botão para abrir e fechar o menu lateral-->
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i> <!--icone menu-->
+            <i class = "fas fa-xmark" id="cancel"></i>  <!--icone fechar-menu-->
+        </label>
+        <div class="sidebar">  <!--container do menu lateral-->
+            <header>Sub-eixo</header>
+            <a href="http://127.0.0.1:3082/pagina-menu-falconi/home.html" class="active">  <!--link onde levará para outras páginas-->
+                <i class="fas fa-home"></i>  <!--icone home-->
+                <span>Home</span>
+            </a>
+            <a href="http://127.0.0.1:3082/pagina-menu-falconi/index.html">
+                <i class="fas fa-plus"></i>  <!--icone forms-->
+                <span>Agenda</span>
+            </a>
+            <a href="http://127.0.0.1:3082/pagina-menu-falconi/eixo.html">
+                <i class="fas fa-plus"></i>  <!--icone add form-->
+                <span>Eixo</span>
+            </a>
+            <a href="">
+                <i class="fas fa-plus"></i>  <!--icone diag-->
+                <span>Pergunta</span>
+            </a>
+            <a href="http://127.0.0.1:3082/pagina-menu-falconi/subeixo.html">
+                <i class="fas fa-plus"></i>  
+                <span>SubEixo</span>
+            </a>
+            <a href="">
+                <i class="fas fa-arrow-right-from-bracket"></i>  <!--icone log-out-->
+                <span>Sair</span>
+            </a>
+        </div> 
+        <nav class="head">
+            <h1 class="agenda">SubEixo</h1>
+        </nav>
+    
+    
+      <!--inputs do form eixo-->
+      <form name="formsub">
+          <div id="subeixo">
+            <input name="nomeSub" value="" id="nomeSub" placeholder="inserir Subeixo"/>
+            <input type="button" id="idInputSub" hidden/>
+            <input name="tipoSub" value="" id="tipoSub" placeholder="inserir tipo do SubEixo"/>
+            <select id="sub" name="sub" onchange="getSub(event)"></select>
+            <input type="button" id="enviarSub" name="postar" value="enviar" onclick="x()"/>
+            <input type="button" id="editarSub" name="editar" value="editar" onclick="updatesub()"/>
+            <!--dropdown-->
+            <br>
+          </div>
+      </form>
+      <!--tabela vazia em que terá os dados inseridos (td e tr no js, pois serão incrementados no corpo do html)-->
+          <div class="container">
+            <table id="tabelaSub"></table>
+          </div>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <script src="subeixo.js"></script>
+    
+    </body>
+</html>

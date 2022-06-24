@@ -1,65 +1,196 @@
+.center {  /*div onde há a tabela vazia*/
+    align-items: center;
+    flex-direction: column;
+  }
 
-
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
-.sidebar{
-    position: fixed;
-    width: 240px;
-    left: -240px;
-    height: 100%;
-    background: black;
-    transition: all .5s ease;
-}
-
-.sidebar header{
-    font-size: 28px;
-    color: white;
-    line-height: 70px;
+  table { /*define o estilo da tabela */
+    border-collapse: collapse;
     text-align: center;
-    background: #BC9316;
-    user-select: none;
-    font-family: sans-serif;
-}
+    box-shadow: 20px 20px 20px 5px grey;
+    background-color: white;
+    width: 700px;
+    margin-top: 40px;
 
-.sidebar a{
-    display: block;
-    height: 65px;
-    width: 100%;
+  }
+
+  tr {/*estiliza as linhas*/
+    border: 2px solid #BC9316;
+    border-collapse: separate;
+    border-spacing: 5px;
+    padding: 5px;
+  }
+
+  td { /*estiliza as colunas */
+    border: 2px solid #BC9316;
+    padding: 5px;
+  }
+
+  #campo { /*container onde tem os inputs (div)*/
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  #nome { /*input para submeter o valor*/
+    border-radius: 5px;
+    width: 110px;
+  }
+
+  #enviarbtn{ /*botão de enviar*/
+    background-color: #BC9316;
+    border-radius: 5px;
+    border-color: black;
+    margin-right: 2px;
+    margin-left: 3px;
+    width: 70px;
+  }
+
+  #editarbtn{ /*botão de editar*/
+    background-color: #BC9316;
+    border-radius: 5px;
+    border-color: black;
+    width: 70px;
+  }
+
+  #idInput{ /*botão escondido*/
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+  }
+
+/*botão editar presente no js*/
+  #edit{
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border-color: #bc9316;
+  }
+
+/*botão deletar agenda presente no js*/
+  #delet{
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border-color: #bc9316;
+  }
+
+  h2{
+    font-family: sans-serif;
+    font-size: medium;
+    margin-bottom: 5px;
+  }
+
+  a{
+    text-decoration: none;
     color: white;
-    line-height: 65px;
-    padding-left: 30px;
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-    border-top: 1px solid #BC9316;
-    border-left:5px solid transparent;
+  }
+
+/***********eixo***********/
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+  #nomeEixo{
+    display: flex;
+    border-radius: 4px;
+    width: 110px;
+  }
+
+  h3{ /*subtítulo do eixo*/
+    text-align: center;
     font-family: sans-serif;
-    transition: all .5s ease;
+    font-size: medium;
+    margin-bottom: 5px;
+  }
+
+  #eixo{  /*container onde há os inputs do eixo (div)*/
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+/*botões do eixo*/
+ #enviareixo{
+    border-radius: 5px;
+    background-color: #bc9316;
+    color: black;
+    margin-left: 4px;
+    margin-right: 2px;
+    width: 70px;
+ }
+
+ #editareixo{
+    border-radius: 5px;
+    background-color: #bc9316;
+    color: black;
+    width: 70px;
+ }
+
+
+ /***********sidebar***************/
+ *{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-a.active,a:hover{
-    border-left: 5px solid white;
-    color: #ffffff;
+.sidebar{ /*posição e dimensões do sidebar*/
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: black;
+  transition: all .5s ease;
+}
+
+.sidebar header{ /*estilização da header*/
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #BC9316;
+  user-select: none;
+  font-family: sans-serif;
+}
+
+.sidebar a{ /*estilização geral do sidebar*/
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid #BC9316;
+  border-left:5px solid transparent;
+  font-family: sans-serif;
+  transition: all .5s ease;
+}
+
+a.active,a:hover{  /*efeito hover*/
+  border-left: 5px solid white;
+  color: #BC9316;
 }
 
 .sidebar a i{
-    font-size: 23px;
-    margin-right: 16px;
+  font-size: 23px;
+  margin-right: 16px;
 }
 
 .sidebar a span{
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 #check{
-    display: none;
+  display: none;
 }
 
-label #btn,label #cancel{
+label #btn,label #cancel{ /*abre e fecha (click)*/
 position: absolute;
 cursor: pointer;
 color: white;
@@ -81,61 +212,140 @@ visibility: hidden;
 }
 
 #check:checked ~ .sidebar{
-    left: 0;
+  left: 0;
 }
 
 #check:checked ~ label #btn{
-    margin-left: 245px;
-    opacity: 100;
-    visibility: visible;
+  margin-left: 245px;
+  opacity: 100;
+  visibility: visible;
 }
 
-@media(max-width: 860px){.sidebar{
-    height: auto;
-    width: 70px;
-    left: 0;
-    margin: 100px 0;
-    }
+@media(max-width: 860px){.sidebar{  /*responsividade do sidebar*/
+  height: auto;
+  width: 70px;
+  left: 0;
+  margin: 100px 0;
+  }
 
-header,#btn,#cancel{
-    display: none;
+header,#btn,#cancel{ /*botão de cancelar (fechar sidebar)*/
+  display: none;
 
-    }
+  }
 
 span{
-    position: absolute;
-    margin-left: 23px;
-    opacity: 0;
-    visibility: hidden;
-    }
+  position: absolute;
+  margin-left: 23px;
+  opacity: 0;
+  visibility: hidden;
+  }
 
 .sidebar a{
-    height: 60px;
-    }
+  height: 60px;
+  }
 
 .sidebar a i{
-    margin-left: -10px;
-    }
+  margin-left: -10px;
+  }
 
-a:hover{
-    width: 200px;
-    background: inherit;
-    }
+a:hover{ /*efeito hover*/
+  width: 200px;
+  background: inherit;
+  }
 
 .sidebar a:hover span{
-    opacity: 1;
-    visibility: visible;
-    }
+  opacity: 1;
+  visibility: visible;
+  }
 }
 
-.image{
-    padding-top: 5%;
-    display: block;
-    margin-left: 30%;
-    margin-right: 60%;
-    text-align: center;
-     width: 200px;
-     height: 200px;
+.head{
+  background-color: #000000;
+  height: 72px;
+  text-align: center;
+}
+/****fim do sidebar******/
+
+.agenda{
+  color: white;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+/*botão de cadastrar agenda */
 
 
-    }
+/*home map*/
+.background{
+  display: flex;
+  justify-content: center;
+  background-color: #202020;
+  margin-top: 10px;
+}
+
+button{
+  background-color: white;
+  border: white;
+}
+
+/*boas vindas*/
+.welcome{
+  display: flex;
+  margin-left: 70px;
+  margin-top: 15px;
+  color: #a77f07;
+}
+
+/**********agenda**************/
+#main{  /*div*/
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+ }
+
+ #tabela{
+   margin: auto;
+   justify-content: center;
+   text-align: center;
+ }
+ 
+ /*sub-eixo*/
+ #subeixo{
+  display: flex;
+  justify-content: center; 
+  margin-top: 25px;
+ }
+
+ #nomeSub{
+  border-radius: 5px;
+  width: 110px;
+  margin-right: 3px;
+ }
+
+ #tipoSub{
+  border-radius: 5px;
+  width: 110px;
+ }
+
+ #enviarSub{
+  border-radius: 5px;
+  background-color: #bc9316;
+  color: black;
+  margin-left: 4px;
+  margin-right: 2px;
+  width: 70px;
+ }
+
+ #editarSub{
+  border-radius: 5px;
+  background-color: #bc9316;
+  color: black;
+  margin-left: 4px;
+  margin-right: 2px;
+  width: 70px;
+ }
+
+select{
+  margin-left: 3px;
+}
+
+
