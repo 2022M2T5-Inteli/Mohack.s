@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    
 }
 
 body {
@@ -51,6 +50,7 @@ background: linear-gradient(90deg, rgba(188,146,22,1) 9%, rgba(220,224,29,1) 100
 	font-size:10px;
 	font-weight:bold;
 	padding:18px 38px;
+    margin-top: -15px;
 }
 
 .conteudo{
@@ -88,6 +88,7 @@ background: linear-gradient(90deg, rgba(188,146,22,1) 9%, rgba(220,224,29,1) 100
 .conteudo-principal-imagem{
     size: 400px;
     height: 430px;
+    margin-top: 10px;
 }
 
 .conteudo-botao {
@@ -100,6 +101,7 @@ background: linear-gradient(90deg, rgba(188,146,22,1) 9%, rgba(220,224,29,1) 100
 	color:#ffffff;
 	font-family:Arial;
 	font-size:10px;
+	font-size:20px;
 	font-weight:bold;
 	padding:25px 52px;
 }
@@ -140,6 +142,7 @@ background: linear-gradient(90deg, rgba(188,146,22,1) 9%, rgba(220,224,29,1) 100
     font-weight: 300;
     font-size: 16px;
     color: #000000;
+    color: #f3f4f5;
 
 
     /* Efeito vidro */
@@ -152,6 +155,8 @@ border: 1px solid rgba(252, 255, 0, 0.35);
 
     width: 280px; /*largura*/
     height: 200px;
+    text-align: center;
+    text-shadow: #000000;
 }
 
 .conteudo-terceiro{
@@ -168,16 +173,64 @@ border: 1px solid rgba(252, 255, 0, 0.35);
     align-items: center;
 }
 
-.conteudo-terciario-textos{
+.conteudo-terciario-p{
     justify-content: space-between;
 }
 
+.terceiro-titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-family: 'Mulish', sans-serif;
+    color: #fff2e7;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.terceiro-titulo-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: 'Mulish', sans-serif;
+    color: #fff2e7;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.frases{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-family: 'Mulish', sans-serif;
+    color: #fff2e7;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
 .ondas{
-    margin-bottom: -10px;
+    margin-bottom: 20px;
 
 }
 
 .rodape{
+    margin-top: -300px;
+}
+
+
+.apoio{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-family: 'Mulish', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.imagens{
     border-top: 0.4px #fff2e7;
     display: flex;
     flex-direction: row;

@@ -4,40 +4,37 @@
         <title>Cadastro de perguntas</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-
-    <body>
+    <body onload="onload()">
         
-        <h3>Gestão de pessoas</h3>
+        <h3>Agenda Educacional</h3>
 
         <hr>
         <nav>
-            <ul>
-            <li>Pergunta 1</li> 
-            <li>Pergunta 2</li>
-            <li>Pergunta 3</li>
-            <li>Pergunta 4</li> 
-            <li>Pergunta 5</li>
-            <li>Pergunta 6</li>
-            <li>Pergunta 7</li>
-            </ul>
+           <button onclick="novaQuestao()">Nova Questão</button> 
+           <label>Perguntas Existentes</label><select name="perguntas-existentes" id="perguntasp"></select>
+
         </nav>
         <hr>
 
         <div class="bloco-enunciado">
             <p class="numero-questao">1.</p>
-            <input type="text" placeholder="Digite sua pergunta aqui." class="caixa-pergunta">
+            <input type="text" placeholder="Digite sua pergunta aqui." class="caixa-pergunta" id="campo_enunciado">
 
             <div class="menu-peso">
-                <p class="titulo-peso">Sub-eixo</p>
-                <select name="dog-names" class="campo-numero">
-                        <option value="ruim">Fatores críticos</option>
-                        <option value="regular">Domínio</option>
+                <p class="titulo-peso">Eixo</p>
+                <select name="dog-names" class="campo-numero" id="eixos">
+                </select>
+            </div>
+
+            <div class="menu-peso">
+                <p class="titulo-peso">SubEixo</p>
+                <select name="dog-names" class="campo-numero" id="subeixos">
                 </select>
             </div>
 
             <div class="menu-peso">
                 <p class="titulo-peso">Peso</p>
-                <input type="number" placeholder="0" max="10" class="campo-numero">
+                <input type="number" placeholder="0" max="10" class="campo-numero" id="campo_peso">
             </div>
 
         </div>
@@ -46,25 +43,25 @@
 
             <div clas="alternativa">
                 <p class="letra-alternativa">A.</p>
-                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa">
+                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa" id="alternativa1">
                 <div class="menu-peso">
                     <p class="titulo-peso">Nota</p>
-                    <select name="dog-names" class="campo-numero">
-                        <option value="ruim">Ruim - 0</option>
-                        <option value="regular">Regular - 1</option>
-                        <option value="bom">Bom - 2</option>
-                        <option value="muito_bom">Muito bom - 3</option>
-                        <option value="excelente">Excelente - 4</option>
+                    <select name="dog-names" class="campo-numero" id="notas1">
+                        <option value="ruim" id="ruim">Ruim - 1</option>
+                        <option value="regular" id="regular">Regular - 2</option>
+                        <option value="bom" id="bom">Bom - 3</option>
+                        <option value="muito_bom" id="muito_bom">Muito bom - 4</option>
+                        <option value="excelente" id="excelente">Excelente - 5</option>
                     </select>
                 </div>
             </div>
 
             <div clas="alternativa">
                 <p class="letra-alternativa">B.</p>
-                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa">
+                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa" id="alternativa2">
                 <div class="menu-peso">
                     <p class="titulo-peso">Nota</p>
-                    <select name="dog-names" class="campo-numero">
+                    <select name="dog-names" class="campo-numero" id="notas2">
                         <option value="ruim">Ruim - 0</option>
                         <option value="regular">Regular - 1</option>
                         <option value="bom">Bom - 2</option>
@@ -76,10 +73,10 @@
 
             <div clas="alternativa">
                 <p class="letra-alternativa">C.</p>
-                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa">
+                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa" id="alternativa3">
                 <div class="menu-peso">
                     <p class="titulo-peso">Nota</p>
-                    <select name="dog-names" class="campo-numero">
+                    <select name="dog-names" class="campo-numero" id="notas3">
                         <option value="ruim">Ruim - 0</option>
                         <option value="regular">Regular - 1</option>
                         <option value="bom">Bom - 2</option>
@@ -91,10 +88,10 @@
 
             <div clas="alternativa">
                 <p class="letra-alternativa">D.</p>
-                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa">
+                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa" id="alternativa4">
                 <div class="menu-peso">
                     <p class="titulo-peso">Nota</p>
-                    <select name="dog-names" class="campo-numero">
+                    <select name="dog-names" class="campo-numero" id="notas4">
                         <option value="ruim">Ruim - 0</option>
                         <option value="regular">Regular - 1</option>
                         <option value="bom">Bom - 2</option>
@@ -106,10 +103,10 @@
 
             <div clas="alternativa">
                 <p class="letra-alternativa">E.</p>
-                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa">
+                <input type="text" placeholder="Digite sua alternativa aqui." class="caixa-alternativa" id="alternativa5">
                 <div class="menu-peso">
                     <p class="titulo-peso">Nota</p>
-                    <select name="dog-names" class="campo-numero">
+                    <select name="dog-names" class="campo-numero" id="notas5">
                         <option value="ruim">Ruim - 0</option>
                         <option value="regular">Regular - 1</option>
                         <option value="bom">Bom - 2</option>
@@ -122,10 +119,15 @@
         </div>
 
         <div class="botoes">
-            <button>EXCLUIR QUESTÃO</button>
+            <button onclick="excluiTudo()">EXCLUIR QUESTÃO</button>
 
-            <button>SALVAR QUESTÃO</button>
+            <button onclick="pegaTudo()" id="botaosalvar">SALVAR QUESTÃO</button>
+            <button onclick="ajasUptadeGeral()" id="botaoedicao">SALVAR EDIÇÃO</button>
         </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js-page - Copia.js"></script>
 
     </body>
 </html>

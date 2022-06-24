@@ -8,5 +8,5 @@ function inserirDados(){
             Email: $('#email').val(),
         },
     });
-    document.location.href="../pagina-menu-falconi/index.html";
+    document.location.href="../pagina-menu-falconi/home.html";
 }

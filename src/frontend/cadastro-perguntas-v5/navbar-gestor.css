@@ -1,0 +1,39 @@
+.navbar-itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu:target{
+    transition:0.5s
+}
+
+.middle{
+    position: absolute;
+    top: 50%;
+    left:28%;
+    transform: translate(-50%,-50%)
+}
+
+.button-inicial{
+margin-left: 30px;
+width: 220px;
+height: 400px;
+padding: 0%;
+border-radius: 1rem 1rem 1rem 1rem;
+font-family: Verdana;
+background-color: #d2ae41;
+color:#f0f8ff;
+border-color: aliceblue;
+}
+
+.button-inicial:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+body{
+    background-image: url("../css/imagens/fundo.png");
+    object-fit: cover;
+}
+
