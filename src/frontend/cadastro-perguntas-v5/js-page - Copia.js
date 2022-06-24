@@ -80,6 +80,7 @@ function listaAlternativas() {
 $("#perguntasp").change(function () {
     let pergunta_selecionada2 = listaPerguntas()
     let alternativas1 = listaAlternativas()
+    console.log(alternativas1)
     for (let i = 1; i <= 5; i++) {
         $("#alternativa" + i).val('')
         $("#notas" + i).val('')
@@ -96,8 +97,8 @@ $("#perguntasp").change(function () {
 })
 
 function ajasUptadeGeral() {
-    ajasUptadePergunta()
     ajasUptadeAlternativa()
+    ajasUptadePergunta()
 }
 
 function teste() {
@@ -229,6 +230,7 @@ function capturaAlternativas(idPerg) {
             })
         }
     });
+    console.log("detrno")
     return alternativas;
 }
 function atualizaAlternativas() {

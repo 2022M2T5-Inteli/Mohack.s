@@ -3,13 +3,13 @@ var dataNotes = [];
 const CHART = document.getElementById("myChart");
 
 //Pega idGestor
-sessionStorage.setItem("gestorId", 2);
+sessionStorage.setItem("gestorId", 1);
 
 $.ajaxSetup({async:false});
 $(document).ready(function (){
     $.get("http://127.0.0.1:3082/Respostas/"+ sessionStorage.getItem("gestorId") +"/1", function(resultado) {
         dataNotes.push(resultado[0].notaTotal);
-        // sessionStorage.setItem("gestorId", resultado[0].idGestor);
+        sessionStorage.setItem("gestorId", resultado[0].idGestor);
     })
 
     $.get("http://127.0.0.1:3082/Respostas/"+ sessionStorage.getItem("gestorId") +"/2", function(resultado) {
@@ -24,10 +24,12 @@ $(document).ready(function (){
         dataNotes.push(resultado[0].notaTotal);
     })
 
+    console.log(dataNotes)
+
     const myChart = new Chart(CHART, {
         type: 'radar',
         data: {
-            labels: ['Formulação Estratégica', 'Gerenciamento pelas Diretrizes', 'Gestão de Projetos', 'Gerenciamento da Rotina'],
+            labels: ['Eixo 1', 'Eixo 2', 'Eixo 3', 'Eixo 4'],
             datasets: [{
                 label: 'Escola',
                 data: dataNotes,

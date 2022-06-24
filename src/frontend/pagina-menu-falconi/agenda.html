@@ -5,23 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eixos</title>
+  <title>Formulario Falconi</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
   <link rel="stylesheet" href="style.css" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body onload="lerEixo()"><!--quando o corpo carregar faz a chamada get para leitura-->
-
-<!--sidebar onde permite a navegação do cadastramento de formulário (etapa por etapa)-->
+<body onload="ler(); lerEixo()">
   <input type="checkbox" id="check">  <!--checkbox que funcionará como botão para abrir e fechar o menu lateral-->
     <label for="check">
         <i class="fas fa-bars" id="btn"></i> <!--icone menu-->
         <i class = "fas fa-xmark" id="cancel"></i>  <!--icone fechar-menu-->
     </label>
     <div class="sidebar">  <!--container do menu lateral-->
-        <header>Menu</header>  <!--cabeçario-->
+        <header>Novo form</header>  <!--cabeçario-->
         <a href="http://127.0.0.1:3082/pagina-menu-falconi/index.html" class="active">  <!--link onde levará para outras páginas-->
             <i class="fas fa-home"></i>  <!--icone home-->
             <span>Home</span>
@@ -34,13 +32,13 @@
             <i class="fas fa-plus"></i>  <!--icone add form-->
             <span>Eixo</span>
         </a>
+        <a href="http://127.0.0.1:3082/pagina-menu-falconi/subeixo.html">
+          <i class="fas fa-plus"></i>  
+          <span>SubEixo</span>
+        </a>
         <a href="http://127.0.0.1:3082/cadastro-perguntas-v5/pg-agendas.html">
             <i class="fas fa-plus"></i>  <!--icone diag-->
             <span>Pergunta</span>
-        </a>
-        <a href="http://127.0.0.1:3082/pagina-menu-falconi/subeixo.html">
-            <i class="fas fa-plus"></i>  
-            <span>SubEixo</span>
         </a>
         <a href="">
             <i class="fas fa-arrow-right-from-bracket"></i>  <!--icone log-out-->
@@ -48,30 +46,38 @@
         </a>
     </div> 
     <nav class="head">
-        <h1 class="agenda">Eixo</h1>
+        <h1 class="agenda">Agenda</h1>
     </nav>
 
-
-  <!--inputs do form eixo-->
-  <form name="form">
-      <div id="eixo">
-        <input name="nomeEixo" value="" id="nomeEixo" placeholder="inserir eixo">
-        <select id="agenda" name="agenda" onchange="getAdd(event)"></select>
+  <!---->
+  <div id="nav"></div>
+  <form>
+    <!--Agenda-->
+    <div id="main">
+      <div id="campo">
+        <input name="nome" value="" id="nome" placeholder="inserir agenda" required>
+        <input type="button" name="postar" value="enviar" onclick="enviar()" id="enviarbtn">
+        <input type="button" name="postar" value="editar" onclick="updateName()" id="editarbtn">
         <!--atualiza-->
-        <input type="button" id="idInputEixo" hidden>
-        <input type="button" id="enviareixo" name="postar" value="enviar" onclick="enviarEixo();">
-        <input type="button" id="editareixo" name="postar" value="editar" onclick="updateEixo()">
-        <!--dropdown-->
-        <br>
+        <input type="button" id="idInput" hidden>
       </div>
+
+
+      </div>
+  </div>
   </form>
-  <!--tabela vazia em que terá os dados inseridos (td e tr no js, pois serão incrementados no corpo do html)-->
-      <div class="container">
-        <table id="tabelaEixo"></table>
-      </div>
+  <div class="center">
+    <br>
+    <table id="tabela">
+    </table>
+    <br>
+  </div>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="eixo.js"> </script>  
+  <script src="eixo.js"> </script>
+  <script src="main.js"></script>
+  
 </body>
 
 </html>
