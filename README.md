@@ -12,7 +12,8 @@
 - <a href="https://www.linkedin.com/in/raduanmuarrek/">Raduan Muarrek</a>
 - <a href="https://www.linkedin.com/in/raphael-lisboa-antunes-a41919231/">Raphael Lisboa</a>
 - <a href="https://www.linkedin.com/in/yasminvit%C3%B3riarocha/">Yasmin Victoria</a>
-##📝Descrição
+
+##📝##Descrição
 O EduTrack é uma aplicação web desenvolvida pelos alunos do primeiro semestre da INTELI - Instituto de Tecnologia e Liderança que tem como objetivo mapear o nível de qualidade educacional no Brasil de maneira escalável e automática.
 <br><br>
 O EduTrack é um aplicativo que permite que gestores de escolas possam responder um questionário gerando um diagnóstico para ver onde ele pode melhorar e aplicar melhores práticas para sua escola. O questionário é separado em dois eixos, o educacional e o de gestão e nele o gestor irá responder perguntas quantitativas sobre suas atuais práticas.
