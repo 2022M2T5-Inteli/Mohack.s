@@ -1,0 +1,25 @@
+#salvar{
+    background-color: #BC9216;
+    border-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+#salvarbtn{
+    display: flex;
+    justify-content: center;
+}
+
+#possuidor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#alternativas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

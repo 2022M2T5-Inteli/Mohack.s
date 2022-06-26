@@ -1,29 +1,22 @@
-body{
-  /background-color:deepskyblue;
-}
-
 nav {
   width: 100%;
   display: flex;
-  /background-color:dimgrey;
+  background-color: #BC9216;
+  justify-content: center;
+  color: white;
 }
 
 nav li {
   float: left;
   list-style: none;
   margin-left: 20px;
-  /background-color:darkgreen;
 }
 
-.bloco-enunciado{
-  /background-color:rgb(75, 30, 210);
-}
 
 .numero-questao{
  font-size: 40px;
  display:inline-block;
  margin-top: 10px;
- /background-color:cyan;
 }
 
 .caixa-pergunta{
@@ -31,44 +24,36 @@ nav li {
   height: 2rem;
   display:inline-block;
   align-self: center;
-  /background-color:cyan;
 }
 
 .titulo-peso{
   margin-bottom: 0px;
   margin-top: 0px;
   text-align: center;
-  /background-color:cyan;
 }
 
 .campo-numero{
-  width: 260%;
-  /background-color:cyan;
+  width: 185%;
 }
 
 .menu-peso{
-  width: 10%;
+  width: 5%;
   display:inline-block;
-  /background-color:blueviolet
+  margin-left: 60px;
 }
 
-.bloco-alternativas{
-  /background-color: rgb(255, 174, 0);
-}
 
 .letra-alternativa{
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 20px;
   display:inline-block;
-  /background-color:rgb(200, 255, 0);
 }
 
 .caixa-alternativa{
   width: 60%;
   height: 1.3rem;
   display:inline-block;
-  /background-color:rgb(255, 175, 175);
 }
 
 button{
@@ -77,6 +62,29 @@ button{
 }
 
 .botoes{
-  /background-color: blueviolet;
   margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 30px;
+  
 }
+
+#agenda{
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#excluirbtn{
+  background-color: #BC9216;
+  color: white;
+  border-radius: 5px;
+}
+
+#salvarbtn{
+  background-color: #BC9216;
+  color: white;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
